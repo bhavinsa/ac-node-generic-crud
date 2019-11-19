@@ -1,3 +1,10 @@
+# About this project
+
+```ac-node-generic-crud is a minimalist design based on the``` [typescript-rest](https://www.npmjs.com/package/typescript-rest) ```library.```
+
+```It has an initial setup for creating APIs and support for testing using Mocha and Chai.```
+
+```It already uses some development configurations like TSLint, clustered server instances, middleware and connection to some databases like MongoDB, Postgres, and MySQL by TypeORM.```
 
 # NoSQL Database
 For object id in NoSQL use ```@ObjectIdColumn()``` in class BaseModel (```base.model.ts```)
