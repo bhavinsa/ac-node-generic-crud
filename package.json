@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "tsc": "tsc",
-    "start": "./node_modules/.bin/ts-node src/index.ts",
+    "start": "ts-node-dev src/index.ts",
     "start:in:docker": "node dist/index.js",
     "start:cluster": "./node_modules/.bin/ts-node src/cluster.ts",
     "build": "npm run clean && tsc && npm run swagger",
@@ -30,6 +30,8 @@
     "passport-jwt": "^4.0.0",
     "pg": "^7.12.1",
     "reflect-metadata": "^0.1.13",
+    "swagger-ui-express": "^4.1.4",
+    "ts-node-dev": "^1.0.0-pre.52",
     "typeorm": "^0.2.19",
     "typescript-ioc": "^1.2.5",
     "typescript-rest": "^2.2.0",
