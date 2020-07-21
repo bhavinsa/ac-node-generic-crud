@@ -3,7 +3,7 @@
 import {CreateDateColumn, UpdateDateColumn, VersionColumn, Entity, ObjectIdColumn } from 'typeorm';
 
 /**
- * @author lucasalvesteixeira
+ * @author bhavin
  */
 @Entity()
 export class BaseModel {

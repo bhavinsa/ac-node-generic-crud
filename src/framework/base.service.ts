@@ -8,7 +8,7 @@ import { DeleteResult, UpdateResult } from 'typeorm';
 import { ORDER } from './base.controller';
 
 /**
- * @author lucasalvesteixeira
+ * @author bhavin
  */
 @Abstract
 export abstract class BaseService<T extends BaseModel> {

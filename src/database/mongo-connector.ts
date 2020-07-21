@@ -7,7 +7,7 @@ const path = require('path');
 /**
  * @author val.rudi
  * &
- * @author lucasalvesteixeira
+ * @author bhavin
  */
 export class MongoConnector {
     private static mongoConnection: Connection;

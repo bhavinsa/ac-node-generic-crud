@@ -6,7 +6,7 @@ import * as request from 'request';
 import { ApiServer } from '../src/api-server';
 import { Container, Scope } from 'typescript-ioc';
 import { HttpMethod, Server } from 'typescript-rest';
-import { SampleModel } from '../src/models/sample.model';
+import { UserModel } from '../src/models/user.model';
 import { MongoConnector } from '../src/database/mongo-connector';
 
 const expect = chai.expect;
@@ -17,10 +17,10 @@ const mongoConnector = new MongoConnector();
 const callRequest: request.RequestAPI<request.Request, request.CoreOptions, request.RequiredUriUrl>
                  = request.defaults({baseUrl: `http://localhost:${apiServer.PORT}`});
 
-const sampleOne = new SampleModel('testOne');
-const sampleTwo = new SampleModel('testTwo');
-const samples: Array<SampleModel> = [sampleOne, sampleTwo];
-let receivedSample: SampleModel = null;
+const sampleOne = new UserModel('testOne');
+const sampleTwo = new UserModel('testTwo');
+const samples: Array<UserModel> = [sampleOne, sampleTwo];
+let receivedSample: UserModel = null;
    
 describe('CRUD Controller Tests', () => {
 

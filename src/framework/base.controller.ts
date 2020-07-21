@@ -12,7 +12,7 @@ export enum ORDER {
 }
 
 /**
- * @author lucasalvesteixeira
+ * @author bhavin
  */
 @Abstract
 export abstract class BaseController<T extends BaseModel> { 

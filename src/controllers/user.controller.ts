@@ -1,22 +1,22 @@
 'use strict';
 
 import { Inject } from 'typescript-ioc';
-import { Path } from 'typescript-rest';
+import { Path, GET, PathParam } from 'typescript-rest';
 import * as Joi from 'joi';
 import { BaseController } from '../framework/base.controller';
-import { SampleService } from '../services/sample.service';
-import { SampleModel } from '../models/sample.model';
+import { UserService } from '../services/user.service';
+import { UserModel } from '../models/user.model';
 
-@Path('/sample-controller')
-export class SampleController extends BaseController<SampleModel> {
+@Path('/user')
+export class UserController extends BaseController<UserModel> {
 
     /**
      * All constrollers of BaseController are inherited
      * To build the specific controller of this layer just create them here
      */
 
-    constructor(@Inject protected sampleService: SampleService) {
-        super(sampleService);
+    constructor(@Inject protected userService: UserService) {
+        super(userService);
     }
 
     public getValidationSchema(): Joi.Schema {
@@ -33,6 +33,15 @@ export class SampleController extends BaseController<SampleModel> {
             'delete': true,
             'update': true
         };
+    }
+
+    @GET
+    @Path('/getData/:id')
+    public getData(@PathParam('id') _id: string): Promise<any> {
+        return new Promise<string>((resolve, reject) => {
+            this.userService.getData(_id).then(resolve)
+                .catch(reject);
+        });
     }
 
 }

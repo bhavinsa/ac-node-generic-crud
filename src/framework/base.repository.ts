@@ -10,7 +10,7 @@ import { MongoConnector } from '../database/mongo-connector';
 // import { PostgresConnector } from '../database/postgres-connector';
 
 /**
- * @author lucasalvesteixeira
+ * @author bhavin
  */
 @Abstract
 export abstract class BaseRepository<T extends BaseModel> {

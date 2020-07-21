@@ -3,7 +3,7 @@ import {createConnection, Connection, ConnectionOptions} from 'typeorm';
 const path = require('path');
 
 /**
- * @author lucasalvesteixeira
+ * @author bhavin
  */
 export class MySqlConnector {
 	private static mySqlConnection: Connection;
